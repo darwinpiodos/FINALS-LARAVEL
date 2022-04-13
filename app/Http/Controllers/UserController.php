@@ -49,6 +49,33 @@ class UserController extends Controller
     }
 
 
+    function list()
+    {
+
+        return User::all();
+    }
+
+    function delete($id)
+    {
+        $result = User::where('id', $id)->delete();
+        if ($result)
+        {
+            return ["result " => "product has been deleted"];
+        }
+        else{
+            return ["result " => "Operation Failed"];
+        } 
+    }
+
+
+
+    function getProduct($id)
+    {
+        return User::find($id);
+    }
+
+
+
 
 
 }

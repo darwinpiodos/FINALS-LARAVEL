@@ -8,8 +8,14 @@ use App\Http\Controllers\UserController;
 
 Route::post('register',[UserController::class,'register']);
 Route::post('login',[UserController::class,'login']);
+Route::get('list',[UserController::class,'list']); 
+Route::delete('delete/{id}',[UserController::class,'delete']); 
 
 
+Route::get('product/{id}',[ProductController::class,'getProduct']); 
+Route::get('/edit-student/{id}',[ProductController::class,'edit']); 
+
+ 
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
