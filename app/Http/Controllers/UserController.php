@@ -69,7 +69,7 @@ class UserController extends Controller
 
 
 
-    function getProduct($id)
+    function getUser($id)
     {
         return User::find($id);
     }

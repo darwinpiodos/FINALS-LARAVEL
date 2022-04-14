@@ -11,9 +11,12 @@ Route::post('login',[UserController::class,'login']);
 Route::get('list',[UserController::class,'list']); 
 Route::delete('delete/{id}',[UserController::class,'delete']); 
 
+Route::delete('delete/{id}',[UserController::class,'delete']); 
 
-Route::get('product/{id}',[ProductController::class,'getProduct']); 
-Route::get('/edit-student/{id}',[ProductController::class,'edit']); 
+Route::get('user/{id}',[UserController::class,'getUser']); 
+ 
+ 
+
 
  
 
